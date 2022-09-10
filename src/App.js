@@ -12,13 +12,15 @@ function App(){
 
   let colorMap = colors.map((color, i) => {
     return (
-      <ColorBlock color = {color} />
+      <ColorBlock color= {color} />
     )
   })
 
   return (
     <div className = "App">
-      {colorMap}
+      {colors.map((color, i) =>
+      <ColorBlock key={i} color={color} />
+      )}
     </div>
   )
 }
